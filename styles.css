@@ -40,32 +40,20 @@
     font-weight: normal;
 }
 
+
 body {
     margin: 0;
     font-family: Comfortaa, Roboto, sans-serif;
-
+    z-index: 9998;
 }
-
 
 .banner {
-    display: flex;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #FDB669 50%, #FFFFFF 50%);
 }
 
-.fon_left, .fon_right {
-    width: 50%;
-    height: auto;
-}
-
-.fon_right {
-    background-color: #FDB669;
-}
-
-.fon_left {
-    background-color: #FFFFFF;
-}
-
-.menu {
+.burger{
     position: absolute;
     height: auto;
     stroke: #BA4326;
@@ -114,18 +102,23 @@ body {
     margin: 0 10px;
 }
 
-.rum, .cocktail_first, .cocktail_center, .cocktail_end, .arrow, h1 {
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
-    left: 50%;
+    top: 50%;
+    right: 50%;
 }
 
 .arrow {
     stroke-width: 4px;
     fill: none;
     stroke: #D75F24;
+    position: absolute;
+    left: 50%;
 }
 
-h1, h2, .text {
+.headline_one, .headline_two, .text {
     text-align: left;
 }
 
@@ -161,12 +154,13 @@ h1, h2, .text {
 
 .about_us {
     position: relative;
-    width: 100%;
     height: auto;
 }
 
-h2 {
-    font: 200 24px/1.45 Comfortaa, sans-serif;
+.headline_two {
+    max-width: 260px;
+    font: 200 24px/1.5 Comfortaa, sans-serif;
+    margin: 0;
 }
 
 .text {
@@ -184,7 +178,7 @@ h2 {
     justify-content: center;
 }
 
-h3 {
+.headline_free {
     text-align: center;
     text-transform: uppercase;
 }
@@ -195,7 +189,6 @@ h3 {
 }
 
 .content {
-    position: absolute;
     text-align: center;
     background-color: white;
     opacity: 0.8;
@@ -206,7 +199,7 @@ h3 {
     text-transform: uppercase;
 }
 
-h4 {
+.headline_four {
     text-align: center;
 }
 
@@ -215,7 +208,7 @@ h4 {
     text-align: center;
 }
 
-span {
+.another_front {
     font-size: 14px;
 }
 
@@ -225,13 +218,13 @@ span {
     line-height: 0;
 }
 
-h6 {
+.headline_five {
     font: 200 18px/1 Comfortaa, sans-serif;
     overflow: hidden;
     text-align: center;
 }
 
-h6:before, h6:after {
+.headline_five:before, .headline_five:after {
     content: '';
     display: inline-block;
     vertical-align: middle;
@@ -242,11 +235,11 @@ h6:before, h6:after {
     margin: 0 16px;
 }
 
-h6:before {
+.headline_five:before {
     margin-left: -100%;
 }
 
-h6:after {
+.headline_five:after {
     margin-right: -100%;
 }
 
@@ -256,11 +249,9 @@ h6:after {
 
 .container {
     position: relative;
-    width: 160px;
-    height: 160px;
 }
 
-.container img {
+.photo {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -273,7 +264,7 @@ h6:after {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 262px;
     justify-content: space-between;
 }
 
@@ -285,35 +276,19 @@ h6:after {
     font: 200 14px/1.2 Roboto, sans-serif;
 }
 
-.info {
+.info, .call {
     font: 200 14px/1 Roboto, sans-serif;
     margin: 0;
+}
+
+.call {
+    display: block;
+    text-decoration: none;
 }
 
 .icon {
     display: flex;
     flex-direction: row;
-}
-
-.vk, .facebook, .insta {
-    position: relative;
-    text-align: center;
-    background-size: cover;
-}
-
-.vk {
-    background: url(photo/icon/vk.png) center center no-repeat;
-    background-size: cover;
-}
-
-.facebook {
-    background: url(photo/icon/facebook.png) center center no-repeat;
-    background-size: cover;
-}
-
-.insta {
-    background: url(photo/icon/insta.png) center center no-repeat;
-    background-size: cover;
 }
 
 .age {
@@ -336,10 +311,17 @@ h6:after {
 @media (max-width: 640px) {
 
     .banner {
-        height: 640px;
+        height: 100vh;
     }
 
-    .menu {
+    .wrapper {
+        margin-top: -210px;
+        margin-right: -110px;
+        width: 220px;
+        height: auto;
+    }
+
+    .burger {
         margin: 17px 14px 0 21px;
         width: 20px;
     }
@@ -349,27 +331,26 @@ h6:after {
         width: 180px;
     }
 
-    nav {
+    .menu {
          display: none;
-     }
-
-    .rum {
-        margin: 110px 0 0 -97px;
     }
+
 
     .cocktails, .seat, .time, .payment, .back, .glass {
         display: none;
     }
 
     .arrow {
-        top: 596px;
+        bottom: 28px;
         width: 28px;
         margin-left: -14px;
     }
 
-    h1 {
+    .headline_one {
+        position: absolute;
         width: 274px;
-        margin: 345px 0 0 -137px;
+        right: -25px;
+        bottom: -85px;
         font: 200 italic 18px/1.35 roboto, sans-serif;
     }
 
@@ -380,17 +361,18 @@ h6:after {
     }
 
     .reserve {
-        margin: 497px 0 70px 0;
+        bottom: 70px;
         font: 200 12px/1.3 comfortaa, sans-serif;
     }
 
-    h2 {
-        margin: 60px 16px 0 16px;
+    .about_us {
+      margin: 60px 16px 0 16px;
     }
 
     .text {
         font: 200 14px/1.4 Roboto, sans-serif;
-        margin: 12px 16px 23px 16px;
+        margin-top: 12px;
+        margin-bottom: 23px;
     }
 
     .poster {
@@ -403,7 +385,7 @@ h6:after {
         margin-top: 26px;
     }
 
-    h3 {
+    .headline_free {
         font: bold 18px/1 Comfortaa, sans-serif;
     }
 
@@ -426,8 +408,7 @@ h6:after {
     }
 
     .content {
-        top: 42px;
-        left: 60px;
+        margin: 42px 60px;
         width: 205px;
         height: 124px;
     }
@@ -437,12 +418,17 @@ h6:after {
         padding-top: 22px;
     }
 
-    h4 {
+    .headline_four {
         font: normal 16px/1 Comfortaa, sans-serif;
         margin: 14px 0;
     }
 
-    h6 {
+    .container {
+        width: 44vw;
+        height: 44vw;
+    }
+
+    .headline_five {
         margin: 42px 16px 16px 16px;
     }
 
@@ -470,18 +456,24 @@ h6:after {
         margin-bottom: 14px;
     }
 
+
     .address {
         margin-bottom: 10px;
     }
 
-    .info {
-        padding-bottom: 10px;
+    .call {
+        color: #FFFFFF;
+        margin-bottom: 12px;
     }
 
-    .vk, .facebook, .insta {
+    .info {
+        margin-bottom: 10px;
+    }
+
+    .vk, .facebook, .instagram_icon {
         width: 27px;
         height: 27px;
-        margin: 8px 13px 64px 0;
+        margin: 5px 13px 0 0;
     }
 
     .age {
@@ -495,10 +487,10 @@ h6:after {
 @media (min-width: 641px) and (max-width: 960px) {
 
     .banner {
-        height: 640px;
+        height: 100vh;
     }
 
-    .menu {
+    .burger {
         margin: 27px 0 0 47px;
         width: 25px;
     }
@@ -508,7 +500,7 @@ h6:after {
         width: 220px;
     }
 
-    nav {
+    .menu {
         display: none;
     }
 
@@ -521,35 +513,30 @@ h6:after {
         right: 32px;
     }
 
-    .rum {
-        top: 182px;
-        margin-left: -320px;
+    .wrapper {
+        margin-top: -130px;
+        margin-right: -300px;
+        width: 650px;
+        height: auto;
     }
 
-    .cocktail_first {
-        top: 225px;
-        margin-left: -135px;
+    .cocktails {
+        margin-top: 25px;
     }
 
-    .cocktail_center {
-        top: 217px;
-        margin-left: -48px;
-    }
-
-    .cocktail_end {
-        top: 232px;
-        margin-left: 40px;
-    }
 
     .arrow {
         display: none;
     }
 
-    h1 {
+    .headline_one {
+        position: absolute;
+        right: 5px;
+        bottom: 40px;
         width: 385px;
-        margin: 337px 0 0 -90px;
         font: 200 italic 14px/1.4 Roboto, sans-serif;
     }
+
 
     .pulse {
         width: 98px;
@@ -558,32 +545,34 @@ h6:after {
     }
 
     .reserve {
-        margin: 491px 0 37px 0;
+        bottom: 47px;
         font: 200 16px/1.3 comfortaa, sans-serif;
+    }
+
+    .about_us {
+        margin: 101px 0 0 35px;
     }
 
     .back {
         position: absolute;
-        top: 90px;
+        top: -10px;
         right: 0;
     }
 
     .glass {
         position: absolute;
         right: 0;
-        top: 120px;
+        top: 20px;
     }
 
-    h2 {
-        width: 60%;
-        padding: 101px 16px 0 35px;
+    .headline_two {
         margin: 0;
     }
 
     .text {
-        width: 55%;
+        max-width: 65%;
         font: 200 16px/1.4 Roboto, sans-serif;
-        padding: 15px 0 10px 35px;
+        padding: 15px 0 10px 0;
         margin: 0;
     }
 
@@ -596,7 +585,7 @@ h6:after {
         margin: 10px 18px;
     }
 
-    h3 {
+    .headline_free {
         font: bold 24px/1 Comfortaa, sans-serif;
         margin: 0;
     }
@@ -621,8 +610,7 @@ h6:after {
     }
 
     .content {
-        top: 42px;
-        left: 63px;
+        margin: 42px 63px;
         width: 213px;
         height: 129px;
     }
@@ -632,18 +620,24 @@ h6:after {
         padding-top: 22px;
     }
 
-    h4 {
+    .headline_four {
         font: normal 16px/1 Comfortaa, sans-serif;
         margin: 16px 0;
     }
 
-    h6 {
+    .container {
+        width: 21vw;
+        height: 21vw;
+    }
+
+    .headline_five {
         margin: 78px 30px 27px 30px;
     }
 
     .main_block {
         background-color: #FFFFFF;
         color: #000000;
+        height: 270px;
     }
 
     .contact, .hours, .payment {
@@ -674,14 +668,19 @@ h6:after {
         margin-bottom: 5px;
     }
 
-    .info {
-        padding-bottom: 8px;
+    .call {
+        color: #000000;
+        margin-bottom: 8px;
     }
 
-    .vk, .facebook, .insta {
+    .info {
+        margin-bottom: 8px;
+    }
+
+    .vk, .facebook, .instagram_icon {
         width: 25px;
         height: 25px;
-        margin: 8px 15px 82px 0;
+        margin: 8px 15px 0 0;
     }
 
     .age {
@@ -691,8 +690,7 @@ h6:after {
 
     .pay {
         font: 200 12px/1.4 Roboto, sans-serif;
-        margin: 0;
-        padding: 10px 0 8px 0;
+        margin: 5px 0 8px 0;
     }
 
     .visa {
@@ -706,10 +704,17 @@ h6:after {
 @media (min-width: 961px) {
 
     .banner {
-        height: 700px;
+        height: 100vh;
     }
 
-    .menu {
+    .wrapper {
+        margin-top: -190px;
+        margin-right: -470px;
+        width: 1000px;
+        height: auto;
+    }
+
+    .burger {
         display: none;
     }
 
@@ -718,31 +723,31 @@ h6:after {
         width: 187px;
     }
 
-    nav {
+    .menu {
         position: absolute;
         margin: 22px 0 0 252px;
         font-size: 0;
     }
 
-    #navbar {
+    .navbar {
         list-style: none;
         margin: 0;
         padding-left: 0;
     }
 
-    #navbar li {
+    .item {
         display: inline-block;
         margin-right: 36px;
         font-size: 0;
     }
 
-    #navbar a {
+    .menu_link {
         text-decoration: none;
         color: #000000;
         font: 200 16px/1 comfortaa, sans-serif;
     }
 
-    #navbar a:after {
+    .menu_link:after {
         background-color: #D75F24;
         display: block;
         content: "";
@@ -752,7 +757,7 @@ h6:after {
         transition: width .3s ease-in-out;
     }
 
-    #navbar a:hover:after, a:focus:after {
+    .menu_link:hover:after, .menu_link:focus:after {
         width: 100%;
     }
 
@@ -765,35 +770,22 @@ h6:after {
         right: 33px;
     }
 
-    .rum {
-        top: 160px;
-        margin-left: -490px;
-    }
 
-    .cocktail_first {
-        top: 220px;
-        margin-left: -205px;
-    }
-
-    .cocktail_center {
-        top: 208px;
-        margin-left: -73px;
-    }
-
-    .cocktail_end {
-        top: 232px;
-        margin-left: 60px;
+    .cocktails {
+        margin-top: 50px;
     }
 
     .arrow {
-        top: 666px;
+        bottom: 16px;
         width: 26px;
         margin-left: -13px;
     }
 
-    h1 {
+    .headline_one {
+        position: absolute;
         width: 605px;
-        margin: 402px 0 0 -129px;
+        right: -10px;
+        bottom: 60px;
         font: 200 italic 18px/1.4 Roboto, sans-serif;
     }
 
@@ -804,26 +796,28 @@ h6:after {
     }
 
     .reserve {
-        margin: 550px 0 52px 0;
+        bottom: 52px;
         font: 200 16px/1.3 comfortaa, sans-serif;
+    }
+
+    .about_us {
+        margin: 67px 0 0 50px;
     }
 
     .back {
         position: absolute;
-        top: 60px;
+        top: -5px;
         right: 50px;
     }
 
     .glass {
         position: absolute;
         right: 96px;
-        top: 91px;
+        top: 25px;
     }
 
-    h2 {
+    .headline_two {
         position: relative;
-        min-width: 50%;
-        padding: 67px 16px 0 50px;
         margin: 0;
     }
 
@@ -831,11 +825,10 @@ h6:after {
         position: relative;
         width: 45%;
         font: 200 18px/1.4 Roboto, sans-serif;
-        margin: 12px 94px 27px 50px;
+        margin: 12px 94px 27px 0;
     }
 
     .poster {
-
         margin-top: 92px;
     }
 
@@ -844,7 +837,7 @@ h6:after {
         margin: 21px 18px;
     }
 
-    h3 {
+    .headline_free {
         font: bold 24px/1 Comfortaa, sans-serif;
         margin: 0;
     }
@@ -869,8 +862,7 @@ h6:after {
     }
 
     .content {
-        top: 50px;
-        left: 73px;
+        margin: 50px 73px;
         width: 248px;
         height: 150px;
     }
@@ -880,18 +872,24 @@ h6:after {
         padding-top: 27px;
     }
 
-    h4 {
+    .headline_four {
         font: normal 20px/1 Comfortaa, sans-serif;
         margin: 18px 0;
     }
 
-    h6 {
-        margin: 57px 30px 28px 30px;
+    .container {
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .headline_five {
+        margin: 67px 30px 28px 30px;
     }
 
     .main_block {
         background-color: #FFFFFF;
         color: #000000;
+        height: 246px;
     }
 
     .contact, .hours, .payment {
@@ -923,14 +921,19 @@ h6:after {
         margin-bottom: 4px;
     }
 
-    .info {
-        padding-bottom: 6px;
+    .call {
+        color: #000000;
+        margin-bottom: 5px;
     }
 
-    .vk, .facebook, .insta {
+    .info {
+        margin-bottom: 6px;
+    }
+
+    .vk, .facebook, .instagram_icon {
         width: 25px;
         height: 25px;
-        margin: 9px 15px 92px 0;
+        margin: 9px 15px 0 0;
     }
 
     .age {
@@ -940,12 +943,11 @@ h6:after {
 
     .pay {
         font: 200 14px/1.4 Roboto, sans-serif;
-        margin: 0;
-        padding: 6px 0 8px 0;
+        margin: 0 0 8px 0;
     }
 
     .visa {
-        margin-top: -6px;
+        margin-top: -5px;
         width: 90px;
     }
 
