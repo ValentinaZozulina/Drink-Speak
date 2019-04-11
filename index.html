@@ -10,11 +10,10 @@
 
 
 <body>
- <div class="test"></div>
 
   <main>
 
-      <section class="banner">
+    <section class="banner">
 
         <div class="header">
             <svg class="burger" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +40,7 @@
                     <li class="item"><a class="menu_link" href="#anchor_menu">Меню</a></li>
                     <li class="item"><a class="menu_link" href="#anchor_gallery">Галерея</a></li>
                     <li class="item"><a class="menu_link" href="#anchor_poster">Афиша</a></li>
-                    <li class="item"><a class="menu_link" href="#anchor_contact">Контакты</a></li>
+                    <li class="item_contact"><a class="menu_link" href="#anchor_contact">Контакты</a></li>
                 </ul>
             </nav>
 
@@ -72,7 +71,7 @@
         </div>
 
           <div class="cocktails">
-            <picture class="cocktail_first">
+            <picture class="cocktail">
                 <source
                         media="(min-width: 998px)"
                         srcset="photo/desktop/one_d.png">
@@ -85,7 +84,7 @@
                         alt="cocktail">
             </picture>
 
-            <picture class="cocktail_center">
+            <picture class="cocktail">
                 <source
                         media="(min-width: 998px)"
                         srcset="photo/desktop/two_d.png">
@@ -98,7 +97,7 @@
                         alt="cocktail">
             </picture>
 
-            <picture class="cocktail_end">
+            <picture class="cocktail">
                 <source
                         media="(min-width: 998px)"
                         srcset="photo/desktop/free_d.png">
@@ -112,7 +111,7 @@
             </picture>
         </div>
 
-          <h1 class="headline_one">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</h1>
+          <h1 class="headline_banner">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</h1>
 
         </div>
 
@@ -128,43 +127,11 @@
 
     <section class="about_us">
 
-        <div class="about_us_photo">
-          <div class="back">
-
-            <picture>
-                <source
-                        media="(min-width: 1100px)"
-                        srcset="photo/desktop/background_d.jpg">
-                <source
-                        media="(min-width: 641px)"
-                        srcset="photo/tablet/background_tab.jpg">
-
-                <img
-                        src="photo/desktop/background_d.jpg"
-                        alt="background">
-            </picture>
-
-        </div>
-          <div class="glass">
-
-            <picture>
-                <source
-                        media="(min-width: 1100px)"
-                        srcset="photo/desktop/glass_d.jpg">
-                <source
-                        media="(min-width: 641px)"
-                        srcset="photo/tablet/glass_tab.jpg">
-
-                <img
-                        src="photo/desktop/glass_d.jpg"
-                        alt="glass">
-            </picture>
-        </div>
-        </div>
-
-        <h2 class="headline_two">Добро пожаловать в Drink & Speak!</h2>
-
         <div class="about_content">
+
+          <h2 class="headline_about">Добро пожаловать в Drink & Speak!</h2>
+
+          <div class="paragraph">
 
           <p class="text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
 
@@ -174,34 +141,70 @@
 
         </div>
 
+        </div>
+
+        <div class="about_photo">
+            <div class="back">
+
+                <picture>
+                    <source
+                            media="(min-width: 1100px)"
+                            srcset="photo/desktop/background_d.jpg">
+                    <source
+                            media="(min-width: 641px)"
+                            srcset="photo/tablet/background_tab.jpg">
+
+                    <img
+                            src="photo/desktop/background_d.jpg"
+                            alt="background">
+                </picture>
+
+            </div>
+            <div class="glass">
+
+                <picture>
+                    <source
+                            media="(min-width: 1100px)"
+                            srcset="photo/desktop/glass_d.jpg">
+                    <source
+                            media="(min-width: 641px)"
+                            srcset="photo/tablet/glass_tab.jpg">
+
+                    <img
+                            src="photo/desktop/glass_d.jpg"
+                            alt="glass">
+                </picture>
+            </div>
+        </div>
+
     </section>
 
     <section class="poster">
 
-        <h3 class="headline_free">Афиша на эту неделю</h3>
+        <h3 class="headline_poster">Афиша на эту неделю</h3>
 
         <div class="gallery">
 
-            <div class="block_one">
+            <div class="block background_upper">
                 <div class="content">
                     <div class="up">Группа</div>
-                    <h4 class="headline_four">The Jacksons</h4>
+                    <h4 class="headline_content">The Jacksons</h4>
                     <div class="down">23 марта, начало <span class="another_front">18:00</span></div>
                 </div>
             </div>
 
-            <div class="block_two">
+            <div class="block background_middle">
                 <div class="content">
                     <div class="up">Группа</div>
-                    <h4 class="headline_four">The Nixos</h4>
+                    <h4 class="headline_content">The Nixos</h4>
                     <div class="down">24 марта, начало <span class="another_front">19:00</span></div>
                 </div>
             </div>
 
-            <div class="block_free">
+            <div class="block background_lower">
                 <div class="content">
                     <div class="up">Dj Muse</div>
-                    <h4 class="headline_four">Spring event</h4>
+                    <h4 class="headline_content">Spring event</h4>
                     <div class="down">30 марта, играет весь вечер</div>
                 </div>
             </div>
@@ -212,7 +215,7 @@
 
     <section class="instagram">
 
-        <h5 class="headline_five">Instagram</h5>
+        <h5 class="headline_instagram">Instagram</h5>
 
         <div class="panel">
 
@@ -261,7 +264,7 @@
 
         <div class="contact">
 
-            <div class="name">Адрес</div>
+            <h6 class="headline_footer">Адрес</h6>
 
             <p class="address">Малый Гнездниковский переулок, дом 12</p>
 
@@ -288,7 +291,7 @@
 
         <div class="hours">
 
-            <div class="name">Режим Работы</div>
+            <h6 class="headline_footer">Режим Работы</h6>
 
             <p class="info"><span class="another_front">ВТ — СУБ</span> с 17.00–3.00</p>
 
@@ -307,7 +310,7 @@
 
         <div class="payment">
 
-            <div class="name">Способы Оплаты</div>
+            <h6 class="headline_footer">Способы Оплаты</h6>
 
             <img class="visa" src="photo/icon/payment.jpg" alt="payment">
 
