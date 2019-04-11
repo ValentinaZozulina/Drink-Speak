@@ -10,6 +10,7 @@
 
 
 <body>
+ <div class="test"></div>
 
   <main>
 
@@ -44,9 +45,10 @@
                 </ul>
             </nav>
 
-            <div class="seat">Свободные места —</div>
+            <div class="seat" data-seats=Есть>Свободные места —</div>
 
-            <div class="time">Открыто до</div>
+
+            <div class="time" data-time=2:00>Открыто до</div>
         </div>
         <a class="anchor_main"></a>
 
@@ -55,7 +57,7 @@
           <div class="rum">
             <picture>
                 <source
-                        media="(min-width: 961px)"
+                        media="(min-width: 998px)"
                         srcset="photo/desktop/rum_d.png">
                 <source
                         media="(min-width: 641px)"
@@ -72,7 +74,7 @@
           <div class="cocktails">
             <picture class="cocktail_first">
                 <source
-                        media="(min-width: 961px)"
+                        media="(min-width: 998px)"
                         srcset="photo/desktop/one_d.png">
                 <source
                         media="(min-width: 641px)"
@@ -85,7 +87,7 @@
 
             <picture class="cocktail_center">
                 <source
-                        media="(min-width: 961px)"
+                        media="(min-width: 998px)"
                         srcset="photo/desktop/two_d.png">
                 <source
                         media="(min-width: 641px)"
@@ -98,7 +100,7 @@
 
             <picture class="cocktail_end">
                 <source
-                        media="(min-width: 961px)"
+                        media="(min-width: 998px)"
                         srcset="photo/desktop/free_d.png">
                 <source
                         media="(min-width: 641px)"
@@ -125,7 +127,9 @@
       </section>
 
     <section class="about_us">
-        <div class="back">
+
+        <div class="about_us_photo">
+          <div class="back">
 
             <picture>
                 <source
@@ -141,7 +145,7 @@
             </picture>
 
         </div>
-        <div class="glass">
+          <div class="glass">
 
             <picture>
                 <source
@@ -156,14 +160,19 @@
                         alt="glass">
             </picture>
         </div>
+        </div>
 
         <h2 class="headline_two">Добро пожаловать в Drink & Speak!</h2>
 
-        <p class="text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+        <div class="about_content">
 
-        <p class="text">A также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации. Здесь ваш текст.</p>
+          <p class="text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
 
-        <p class="text">Здесь ваш текст. Здесь ваш текст. Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию.</p>
+          <p class="text">A также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации. Здесь ваш текст.</p>
+
+          <p class="text">Здесь ваш текст. Здесь ваш текст. Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию.</p>
+
+        </div>
 
     </section>
 
